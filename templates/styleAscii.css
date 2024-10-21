@@ -1,0 +1,91 @@
+body{
+    background-color: cornflowerblue;
+}
+
+h1{
+    color: #000000;
+    font-size: 300%;
+}
+
+h1:hover{
+    color: rgb(221, 0, 255);
+    text-shadow: 4px 1px 4px rgb(226, 224, 224);
+    transition: 0.20s;
+    font-style: oblique;
+}
+
+textarea{
+    color: rgb(88, 86, 83);
+    font-style: oblique;
+    border-radius: 20px;
+    padding: 5px;
+    width: 30rem;
+    height: 50px;
+    overflow: auto;
+    border: 20px solid rgb(16, 53, 75);
+    box-shadow: 10px 9px 9px #16152e;
+}
+
+select{
+    color: rgb(5, 45, 46);
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 60%;
+    width: 5%;
+    text-align: center;
+    
+}
+
+#subbtn {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#subbtn {
+  background-color: rgb(5, 6, 45);
+  border-radius: 6px;
+  width: 10%;
+  transition: 300ms;
+  font-size: 24px;
+ 
+  min-width: 196px;
+}
+
+#fontSize{
+    color: rgb(129, 125, 125);
+    border-radius: 40px;
+    padding: 10px;
+  font-size: 50%;
+    overflow: auto;
+}
+#content{
+    font-size: 150%;
+}
+
+#colorInput{
+  width: 100px; 
+  height: 35px; 
+}
+
+pre{
+    text-shadow: 4px 1px 4px rgb(226, 224, 224);
+}

@@ -1,0 +1,32 @@
+body{
+    background-color: cornflowerblue;
+    font-size: 550%;
+
+}
+#content{
+text-align: center;
+margin-top: 10%;
+
+}
+
+#name{
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 60%;
+    width: 15%;
+    text-align: center;
+    overflow: auto;
+}
+
+#subbtn {
+    border-radius: 30px;
+    padding: 10px;
+    color: white;
+    font-size: 60%;
+    width: 15%;
+    text-align: center;
+    overflow: auto;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+}
+
+

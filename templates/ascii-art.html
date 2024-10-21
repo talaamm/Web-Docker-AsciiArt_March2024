@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ascii art web</title>
+        <link rel="stylesheet" href="/styleAscii.css">
+    </head>
+<body>
+  
+        <center>
+            <h1>Ascii Art Web</h1>
+  <div id="content">
+        <form method="post">
+<textarea name="inputText" id="inputText" cols="30" rows="10" placeholder="Type Something Here!">{{.InputText}}</textarea>
+      <br><br>
+
+<input type="radio" id="standard" name="banner" value="standard" {{if eq .Font "standard"}}checked{{end}}>
+<label for="standard">Standard</label>
+
+<input type="radio" id="shadow" name="banner" value="shadow" {{if eq .Font "shadow"}}checked{{end}}>
+<label for="shadow">Shadow</label>
+
+<input type="radio" id="thinkertoy" name="banner" value="thinkertoy" {{if eq .Font "thinkertoy"}}checked{{end}}>
+<label for="thinkertoy">Thinkertoy</label>
+
+<br><br>
+<input type="color" id="colorInput" name="colorInput" value="{{.Color}}">
+<select name="alignInput" id="alignInput" size="1">
+<option name="alignInput" value="center" {{if eq .Align "center"}}selected{{end}}>Center</option>
+<option name="alignInput" value="left" {{if eq .Align "left"}}selected{{end}}>Left</option>
+<option name="alignInput" value="right" {{if eq .Align "right"}}selected{{end}}>Right</option>
+
+
+</select>
+<br><br><br>
+<label for="fontSize">Type in the Font-Size (1-7)</label>
+<input type="number" id="fontSize" name="fontSize" min="1" max="7" value="{{.FontSize}}">
+
+<br><br><br>
+
+<input type="submit" id="subbtn" value="Confirm">
+</form>
+<div id="preRes">
+    <font color="{{.Color}}" size="{{.FontSize}}">
+      <pre align="{{.Align}}"><b>{{.AsciiArtPrint}}</b></pre>
+
+    </font>
+
+</div>
+</center>
+</div>
+<!--Avoid using {{.}}, which refers to the entire data structure and might not have the specific field you need.-->
+    </body>
+
+</html>
