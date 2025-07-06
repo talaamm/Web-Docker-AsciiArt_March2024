@@ -135,7 +135,6 @@ The ASCII art web application is then containerized using Docker. This allows yo
 ## Contributors
 - **Tala Amm**
 - **Noor Halabi**
-- **Noor Kanaan**
 - **Amro Khweis**
 
 ## Status
