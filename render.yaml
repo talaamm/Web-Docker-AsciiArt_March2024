@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ascii-art-generator
+    runtime: go
+    buildCommand: go build -o ascii-art main.go
+    startCommand: ./ascii-art
+    envVars:
+      - key: PORT
+        value: 8000 

@@ -5,6 +5,7 @@ import (
 	"html/template" //  GET Tip: go templates to receive and display data from the server.
 	"io/ioutil"
 	"net/http"
+	"os"
 	"strings"
 )
 
@@ -14,9 +15,16 @@ func main() {
 
 	http.HandleFunc("/ascii-art", openAscii_artFile)
 	//Display the result in the route /ascii-art after the POST is completed. So going from the home page to another page.
+    // fmt.Print("Starting server at port 8000\n")
+    // err := http.ListenAndServe(":8000", nil)
+	// Get port from environment variable or default to 8000
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8000"
+	}
 
-	fmt.Print("Starting server at port 8000\n")
-	err := http.ListenAndServe(":8000", nil)
+	fmt.Printf("Starting server at port %s\n", port)
+	err := http.ListenAndServe(":"+port, nil)
 	if err != nil {
 		fmt.Print(err)
 		return
