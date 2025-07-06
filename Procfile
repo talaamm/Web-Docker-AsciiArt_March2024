@@ -1,1 +1,1 @@
-web: ./ascii-art 
+web: go run main.go 
