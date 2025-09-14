@@ -2,7 +2,7 @@
 
 This project consists of creating a web application that allows users to generate ASCII art banners using a web interface. It is built using Go for the backend and HTML for the frontend. The web application lets users select from different banner styles and input text to generate ASCII art. Additionally, the project is containerized using Docker for easier deployment and scaling.
 
-Live Demo: [Deploy to Render](https://render.com) (see RENDER_DEPLOYMENT.md for instructions)
+Live Demo: https://web-docker-asciiart-march2024.onrender.com
 
 ## Overview
 
