@@ -1,3 +1,3 @@
-module ascii-art-web0dockerize
+module ascii-art-web
 
 go 1.20

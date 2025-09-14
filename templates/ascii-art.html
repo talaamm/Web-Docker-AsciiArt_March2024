@@ -25,8 +25,8 @@
 <label for="thinkertoy">Thinkertoy</label>
 
 <br><br>
-<input type="color" id="colorInput" name="colorInput" value="{{.Color}}">
-<select name="alignInput" id="alignInput" size="1">
+<input title="colorinput" type="color" id="colorInput" name="colorInput" value="{{.Color}}">
+<select title="aligninput" name="alignInput" id="alignInput" size="1">
 <option name="alignInput" value="center" {{if eq .Align "center"}}selected{{end}}>Center</option>
 <option name="alignInput" value="left" {{if eq .Align "left"}}selected{{end}}>Left</option>
 <option name="alignInput" value="right" {{if eq .Align "right"}}selected{{end}}>Right</option>

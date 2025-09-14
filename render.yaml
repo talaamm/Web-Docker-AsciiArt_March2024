@@ -6,4 +6,6 @@ services:
     startCommand: ./ascii-art
     envVars:
       - key: PORT
-        value: 8000 
+        value: 10000
+    healthCheckPath: /
+    autoDeploy: true 

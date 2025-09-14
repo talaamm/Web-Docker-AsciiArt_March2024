@@ -2,7 +2,7 @@
 
 This project consists of creating a web application that allows users to generate ASCII art banners using a web interface. It is built using Go for the backend and HTML for the frontend. The web application lets users select from different banner styles and input text to generate ASCII art. Additionally, the project is containerized using Docker for easier deployment and scaling.
 
-Live Demo: https://web-production-cf1b.up.railway.app/
+Live Demo: [Deploy to Render](https://render.com) (see RENDER_DEPLOYMENT.md for instructions)
 
 ## Overview
 
@@ -44,41 +44,49 @@ The ASCII art web application is then containerized using Docker. This allows yo
    - Includes a `Dockerfile` to build the Docker image and create a container.
 
 ## Technologies Used
+
 - **Backend**: Go
 - **Frontend**: HTML
 - **Containerization**: Docker
+- **Deployment**: Render
+-
 
-## Installation
+## Quick Start
 
-### Running the Web Application (Without Docker)
+### Running Locally
 
 1. Clone the repository:
+
    ```bash
-   git clone https://adam-jerusalem.nd.edu/git/taamm/ascii-art-web
+   git clone https://github.com/your-username/ascii-art-web
    cd ascii-art-web
    ```
 
 2. Run the Go server:
+
    ```bash
    go run main.go
    ```
 
-3. Open the web browser and go to `http://localhost:8080` to use the web interface.
+3. Open your browser and go to `http://localhost:8000` to use the web interface.
 
 ### Running the Dockerized Version
 
 1. Clone the repository for the Dockerized version:
+
    ```bash
    git clone https://adam-jerusalem.nd.edu/git/taamm/ascii-art-web-dockerize
    cd ascii-art-web-dockerize
    ```
 
 2. Build the Docker image:
+
    ```bash
    docker build -t ascii-art-web .
    ```
 
 3. Run the Docker container:
+
    ```bash
    docker run -p 8080:8080 ascii-art-web
    ```
@@ -87,16 +95,19 @@ The ASCII art web application is then containerized using Docker. This allows yo
 
 ## HTTP Endpoints
 
-### GET / 
+### GET /
+
 - **Description**: Displays the main page with the form for user input.
 - **Response**: HTML page containing input fields for the text and banner selection.
 
 ### POST /ascii-art
+
 - **Description**: Processes the input text and selected banner, generating ASCII art and displaying it.
 - **Request Body**: Form data with the text and banner style.
 - **Response**: HTML page with the generated ASCII art displayed.
 
 ### HTTP Status Codes
+
 - **200 OK**: Successful request.
 - **404 Not Found**: Template or banner not found.
 - **400 Bad Request**: Invalid form data.
@@ -105,20 +116,24 @@ The ASCII art web application is then containerized using Docker. This allows yo
 ## Implementation Details
 
 ### Backend (Go)
+
 - The backend is implemented using Go's standard libraries for HTTP and HTML templating.
 - The server listens on port 8080 and serves the main page and processes the ASCII art requests.
 
 ### Frontend (HTML)
+
 - The frontend consists of an HTML form where users can enter text and select a banner style.
 - The form submits a POST request to the `/ascii-art` endpoint, and the result is displayed on the page.
 
 ### Dockerization
+
 - The project is containerized using Docker to provide a simple deployment process.
 - The `Dockerfile` defines the steps to build the image and run the container.
 
 ## Example Usage
 
 1. **Start the server locally (without Docker)**:
+
    ```bash
    go run main.go
    ```
@@ -129,15 +144,19 @@ The ASCII art web application is then containerized using Docker. This allows yo
 
 3. **Start with Docker**:
    - After building the Docker image, run the container:
+
      ```bash
      docker run -p 8080:8080 ascii-art-web
      ```
+
    - Visit `http://localhost:8080` to access the app.
 
 ## Contributors
+
 - **Tala Amm**
 - **Noor Halabi**
 - **Amro Khweis**
 
 ## Status
+
 - The project has been successfully completed and passed all audits. Both the web version and the Dockerized version are fully functional.
